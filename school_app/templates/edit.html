@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+</head>
+<body>
+    <h2>Edit Details</h2>
+    <form action="/update/{{student.id}}" method="post">
+        {% csrf_token %}
+        <label for="">Roll No</label>
+        <input name="student_rollno" id="rollno" type="text" value="{{ student.student_rollno }}">
+        <label for="">Student Name</label>
+        <input name="student_name" id="name" type="text" value="{{ student.student_name }}">
+        <label for="">Class</label>
+        <input name="student_class" id="class" type="text" value="{{ student.student_class }}">
+        <label for="">Guardian Name</label>
+        <input name="student_guardian" id="guardian" type="text" value="{{ student.student_guardian }}">
+        <label for="">Teacher In Charge</label>
+        <input type="text" name="teacher_in_charge" id="teacher" value="{{ student.teacher_in_charge }}">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

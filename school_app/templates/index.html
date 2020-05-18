@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>School</title>
+</head>
+<body>
+    <h1>Baabte School</h1>
+    <form action="/ind" method="POST">
+        {% csrf_token %}
+        <label for="">Roll No</label>
+        <input name="student_rollno" id="rollno" type="text" required>
+        <label for="">Student Name</label>
+        <input name="student_name" id="name" type="text" required>
+        <label for="">Class</label>
+        <input name="student_class" id="class" type="text" required>
+        <label for="">Guardian Name</label>
+        <input name="student_guardian" id="guardian" type="text" required>
+        <label for="">Teacher In Charge</label>
+        <input type="text" name="teacher_in_charge" id="teacher" required>
+        <input type="submit" value="Submit">
+    
+    </form>
+</body>
+</html>
